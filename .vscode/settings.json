@@ -1,0 +1,6 @@
+{
+    "javascript.format.enable": false,
+    "javascript.autoClosingTags": false,
+    "javascript.format.insertSpaceAfterCommaDelimiter": false,
+    "typescript.validate.enable": false
+}
