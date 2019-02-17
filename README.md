@@ -1,22 +1,15 @@
-# hassanbazzi
+### Commands
 
-## CLI Commands
+`yarn`
 
-``` bash
-# install dependencies
-npm install
+`preact watch`: start a dev server
 
-# serve with hot reload at localhost:8080
-npm run dev
+`preact build --no-prerender`: build an app
 
-# build for production with minification
-npm run build
+`preact serve`: serve the app locally
 
-# test the production build locally
-npm run serve
+Note: If you have issues running the above Preact commands, try running them using `npm-run` 
 
-# run tests with jest and preact-render-spy 
-npm run test
-```
+e.g.: `npm-run preact watch`
 
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+To install npm-run: `npm i -g npm-run`

@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  h1,
+  h3 {
+    transition: all .3s ease;
+    color: rgba(27, 90, 143, 0.9);
+
+    &:hover {
+      color: rgba(27, 90, 143, 1);
+    }
+  }
+
+  h1 {
+    margin: 0 auto;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  h3 {
+    margin: 0 auto;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 300;
+
+    @media all and (max-width: 740px) {
+      font-size: 1rem;
+    }
+  }
+}
