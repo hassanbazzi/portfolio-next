@@ -1,4 +1,5 @@
 import { resolve } from 'path'
+const netlifyPlugin = require('preact-cli-plugin-netlify');
 
 export default function (config, env, helpers) {
   config.resolve.alias.src = resolve(__dirname, './src')
@@ -11,5 +12,5 @@ export default function (config, env, helpers) {
   let babelConfig = rule.options;
   
   babelConfig.plugins.push('@babel/plugin-proposal-export-default-from');
-  return config
+  return netlifyPlugin(config)
 }
