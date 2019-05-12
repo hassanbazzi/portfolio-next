@@ -1,12 +1,12 @@
-import style from "./about.scss";
+import styles from "components/about";
 export default () => (
-  <div class={style.aboutContainer}>
-    <div class={style.picture}>
-      <div class={style.imgContainer}>
+  <div class={styles.aboutContainer}>
+    <div class={styles.picture}>
+      <div class={styles.imgContainer}>
         <img src="/assets/portrait.jpg" />
       </div>
     </div>
-    <div class={style.description}>
+    <div class={styles.description}>
       <h1>Hassan Bazzi</h1>
       <h3>Engineering - Design - Product</h3>
       <p>

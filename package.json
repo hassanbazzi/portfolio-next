@@ -5,7 +5,7 @@
     "dev": "preact watch",
     "start": "netlify dev -d public",
     "prestart": "yarn setup",
-    "setup": "preact build --dest public",
+    "setup": "preact build --dest public --brotli",
     "presetup": "rm -rf public/assets && mkdir -p public"
   },
   "dependencies": {
