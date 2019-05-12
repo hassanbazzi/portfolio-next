@@ -48,6 +48,12 @@ const items = [
     position: "Core team",
     summary:
       "Mostly contributing to Preact CLI, a build tool that brings all best practices with zero config. Also contributed to core Preact."
+  },
+  {
+    name: "And more...",
+    logo: null,
+    position: "various",
+    summary: "social"
   }
 ];
 export default () => (
