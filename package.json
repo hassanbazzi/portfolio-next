@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "preact watch",
-    "start": "netlify dev -d dest",
+    "start": "netlify dev -d public",
     "prestart": "yarn setup",
-    "setup": "preact build",
-    "presetup": "rm -rf build/assets && mkdir -p dest"
+    "setup": "preact build --dest public",
+    "presetup": "rm -rf public/assets && mkdir -p public"
   },
   "dependencies": {
     "preact": "8.2.7",
