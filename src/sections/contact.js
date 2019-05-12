@@ -4,11 +4,33 @@ import Button from "components/Button";
 import ReCaptcha from "preact-google-recaptcha";
 
 export default class Contact extends Component {
-  submit() {
-    // submit form data
+  constructor(props) {
+    super(props);
   }
 
+  submit = e => {
+    e.preventDefault();
+    console.log(this.state);
+
+    fetch("/functions/form", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      data: {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message
+      }
+    })
+      .then(response => response.json())
+      .then(data => ({
+        statusCode: 200,
+        body: data.joke
+      }))
+      .catch(error => ({ statusCode: 422, body: String(error) }));
+  };
+
   handleInput = ({ target }) => {
+    console.log("target", target.name, target.value);
     this.setState({
       [target.name]: target.value
     });
@@ -22,7 +44,7 @@ export default class Contact extends Component {
     return (
       <div>
         <p>Feel free to drop me a line:</p>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" onSubmit={this.submit}>
           <TextField label="Your name" name="name" onKeyUp={this.handleInput} />
           <TextField
             label="Your email"
