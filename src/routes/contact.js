@@ -22,7 +22,7 @@ export default class Contact extends Component {
     return (
       <div>
         <p>Feel free to drop me a line:</p>
-        <form>
+        <form name="contact" method="POST" data-netlify="true">
           <TextField label="Your name" name="name" onKeyUp={this.handleInput} />
           <TextField
             label="Your email"
@@ -39,13 +39,7 @@ export default class Contact extends Component {
             sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
             onChange={this.onChange}
           />
-          <Button
-            onClick={e => {
-              this.submit();
-            }}
-          >
-            Send
-          </Button>
+          <Button>Send</Button>
         </form>
       </div>
     );
