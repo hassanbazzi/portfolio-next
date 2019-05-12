@@ -1,6 +1,6 @@
-import About from "routes/about";
-import Portfolio from "routes/portfolio";
-import Contact from "routes/contact"
+import About from "sections/about";
+import Portfolio from "sections/portfolio";
+import Contact from "sections/contact"
 
 export default () => (
   <div id="app">
