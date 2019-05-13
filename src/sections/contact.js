@@ -74,11 +74,8 @@ export default class Contact extends Component {
     return (
       <div>
         <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-          <label for="name">name</label>
           <input type="text" name="name" hidden />
-          <label for="email">email</label>
           <input type="email" name="email" hidden />
-          <label for="message">message</label>
           <textarea name="message" hidden />
         </form>
         <h3>Feel free to drop me a line:</h3>
