@@ -2,10 +2,10 @@
   "name": "hassanbazzi",
   "version": "1.0.0",
   "scripts": {
-    "dev": "preact watch",
+    "dev": "preact watch --template template.html",
     "start": "netlify dev -d public",
     "prestart": "yarn setup",
-    "setup": "preact build --dest public --brotli",
+    "setup": "preact build --template template.html --dest public --brotli",
     "presetup": "rm -rf public/assets && mkdir -p public"
   },
   "dependencies": {

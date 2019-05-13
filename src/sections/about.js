@@ -3,7 +3,7 @@ export default () => (
   <div class={styles.aboutContainer}>
     <div class={styles.picture}>
       <div class={styles.imgContainer}>
-        <img src="/assets/portrait.jpg" />
+        <img alt="Portrait" src="/assets/portrait.jpg" />
       </div>
     </div>
     <div class={styles.description}>
