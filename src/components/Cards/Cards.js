@@ -24,7 +24,7 @@ export default ({ items }) => (
               </a>
             </li>
             <li>
-              <a rel="noopener" href="https://medium.com/habazzi">
+              <a rel="noopener" href="https://medium.com/@habazzi">
                 Medium: habazzi
               </a>
             </li>

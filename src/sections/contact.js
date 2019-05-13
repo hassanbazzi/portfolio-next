@@ -33,7 +33,7 @@ export default class Contact extends Component {
       .catch(error => alert(error));
   };
 
-  handleInput = ({ target }) => {
+  handleInput = ({ target, preventDefault }) => {
     this.setState({
       [target.name]: target.value
     });
