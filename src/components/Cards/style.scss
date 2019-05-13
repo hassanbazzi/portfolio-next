@@ -11,7 +11,9 @@
   @media all and (min-width: 1140px) {
     grid-template-columns: 31% 31% 31%;
   }
-
+  ul {
+    padding-left:1rem;
+  }
 }
 
 .item {

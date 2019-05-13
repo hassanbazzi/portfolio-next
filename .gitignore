@@ -1,6 +1,5 @@
 node_modules
-/build
+/public
 /*.log
-*.lock
 
 package-lock.json

@@ -1,18 +1,37 @@
 {
-  "name": "Hassan Bazzi",
-  "version": "1.0",
+  "name": "hassanbazzi",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "preact watch",
+    "start": "netlify dev -d public",
+    "prestart": "yarn setup",
+    "setup": "preact build --dest public --brotli",
+    "presetup": "rm -rf public/assets && mkdir -p public"
+  },
   "dependencies": {
+    "node-fetch": "^2.5.0",
     "preact": "8.2.7",
+    "preact-google-recaptcha": "^0.2.1",
+    "preact-render-to-string": "^4.1.0",
     "window-or-global": "1.0.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "eslint": "^4.18.2",
     "eslint-plugin-react": "^7.7.0",
+    "husky": "^2.2.0",
     "mocha": "^5.0.4",
     "mocha-standard": "1.0.0",
     "node-sass": "^4.7.2",
-    "preact-cli": "2.2.1",
+    "preact-cli": "3.0.0-rc.1",
+    "preact-cli-plugin-netlify": "^1.1.0",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0",
     "sass-loader": "^6.0.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
