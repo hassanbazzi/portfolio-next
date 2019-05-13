@@ -11,7 +11,12 @@ export default class Contact extends Component {
 
   submit = e => {
     e.preventDefault();
-    if (!this.state.verified || !this.state.name || !this.state.email || !this.state.message) {
+    if (
+      !this.state.verified ||
+      !this.state.name ||
+      !this.state.email ||
+      !this.state.message
+    ) {
       return;
     }
 
@@ -57,7 +62,9 @@ export default class Contact extends Component {
 
   render() {
     return this.state.sentEmail ? (
-      <div><p>Email sent! I'll try to get back to you asap.</p></div>
+      <div>
+        <p>Email sent! I'll try to get back to you asap.</p>
+      </div>
     ) : (
       this.form()
     );
@@ -87,7 +94,7 @@ export default class Contact extends Component {
             onKeyUp={this.handleInput}
           />
           <ReCaptcha
-            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+            sitekey="6LduHaMUAAAAAH52aU2TwF08pjJECO8nR8L0pml-"
             onChange={this.onChange}
           />
           <Button>Send</Button>
