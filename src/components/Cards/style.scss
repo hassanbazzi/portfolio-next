@@ -12,7 +12,7 @@
     grid-template-columns: 31% 31% 31%;
   }
   ul {
-    padding-left:1rem;
+    padding-left: 1rem;
   }
 }
 
@@ -21,7 +21,7 @@
   border: 1px solid rgba(27, 90, 143, 0.2);
   background: rgba(69, 127, 172, 0.01);
   border-radius: 2px;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 
   &:hover {
     border: 1px solid rgba(27, 90, 143, 0.5);
@@ -36,10 +36,10 @@
   }
 
   h3 {
-    margin-top: .25rem;
+    margin-top: 0.25rem;
     font-size: 1rem;
     font-weight: 200;
-    color: rgba(27, 90, 143, 0.8);
+    color: rgba(24, 77, 122, 0.8);
   }
 
   p {
