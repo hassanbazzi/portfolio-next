@@ -4,47 +4,76 @@ import Button from "components/Button";
 import ReCaptcha from "preact-google-recaptcha";
 
 export default class Contact extends Component {
-  constructor(props) {
-    super(props);
-  }
+  state = {
+    verified: false,
+    sentEmail: false
+  };
 
   submit = e => {
     e.preventDefault();
-    console.log(this.state);
+    if (!this.state.verified || !this.state.name || !this.state.email || !this.state.message) {
+      return;
+    }
 
-    fetch("/functions/form", {
+    fetch("/", {
       method: "POST",
-      headers: { Accept: "application/json" },
-      data: {
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message
-      }
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(response => response.json())
-      .then(data => ({
-        statusCode: 200,
-        body: data.joke
-      }))
-      .catch(error => ({ statusCode: 422, body: String(error) }));
+      .then(() => {
+        this.setState({
+          sentEmail: true
+        });
+      })
+      .catch(error => alert(error));
   };
 
   handleInput = ({ target }) => {
-    console.log("target", target.name, target.value);
     this.setState({
       [target.name]: target.value
     });
   };
 
-  onChange = response => {
-    console.log("Captcha response:", response);
+  onChange = async response => {
+    const resp = await fetch("/.netlify/functions/recaptcha", {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        "Content-Type": "application/json"
+      },
+      referrer: "no-referrer", // no-referrer, *client
+      body: JSON.stringify({
+        response
+      }) // body data type must match "Content-Type" header
+    });
+
+    const data = await resp.json();
+
+    if (data.success) {
+      this.setState({
+        verified: true
+      });
+    }
   };
 
   render() {
+    return this.state.sentEmail ? (
+      <div><p>Email sent! I'll try to get back to you asap.</p></div>
+    ) : (
+      this.form()
+    );
+  }
+
+  form() {
     return (
       <div>
-        <p>Feel free to drop me a line:</p>
+        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message" />
+        </form>
+        <h3>Feel free to drop me a line:</h3>
         <form name="contact" onSubmit={this.submit}>
+          <input type="hidden" name="form-name" value="contact" />
           <TextField label="Your name" name="name" onKeyUp={this.handleInput} />
           <TextField
             label="Your email"
@@ -66,4 +95,10 @@ export default class Contact extends Component {
       </div>
     );
   }
+}
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
 }
