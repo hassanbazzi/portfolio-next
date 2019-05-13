@@ -9,6 +9,7 @@
     "presetup": "rm -rf public/assets && mkdir -p public"
   },
   "dependencies": {
+    "copy-webpack-plugin": "^5.0.3",
     "node-fetch": "^2.5.0",
     "preact": "8.2.7",
     "preact-google-recaptcha": "^0.2.1",
