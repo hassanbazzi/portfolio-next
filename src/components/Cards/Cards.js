@@ -9,16 +9,24 @@ export default ({ items }) => (
         {summary === "social" ? (
           <ul>
             <li>
-              <a href="https://linkedin.com/in/habazzi">LinkedIn: habazzi</a>
+              <a rel="noopener" href="https://linkedin.com/in/habazzi">
+                LinkedIn: habazzi
+              </a>
             </li>
             <li>
-              <a href="https://twitter.com/habazzi">Twitter: habazzi</a>
+              <a rel="noopener" href="https://twitter.com/habazzi">
+                Twitter: habazzi
+              </a>
             </li>
             <li>
-              <a href="https://github.com/hassanbazzi">Github: hassanbazzi</a>
+              <a rel="noopener" href="https://github.com/hassanbazzi">
+                Github: hassanbazzi
+              </a>
             </li>
             <li>
-              <a href="https://medium.com/habazzi">Medium: habazzi</a>
+              <a rel="noopener" href="https://medium.com/habazzi">
+                Medium: habazzi
+              </a>
             </li>
           </ul>
         ) : (

@@ -20,6 +20,7 @@ export default () => (
         Hassan's latest focus has been on{" "}
         <a
           href="https://medium.com/@habazzi/what-the-hell-do-we-want-in-life-anyways-b6456bd82f3d"
+          rel="noopener"
           target="_blank"
         >
           helping others figure out their dreams.
