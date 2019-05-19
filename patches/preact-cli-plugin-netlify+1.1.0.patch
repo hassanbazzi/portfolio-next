@@ -1,5 +1,5 @@
 diff --git a/node_modules/preact-cli-plugin-netlify/index.js b/node_modules/preact-cli-plugin-netlify/index.js
-index 7187105..ec437f2 100644
+index 7187105..2681077 100644
 --- a/node_modules/preact-cli-plugin-netlify/index.js
 +++ b/node_modules/preact-cli-plugin-netlify/index.js
 @@ -4,8 +4,9 @@
@@ -32,7 +32,7 @@ index 7187105..ec437f2 100644
 +  const swBuilder = getPluginsByName(config, 'SWBuilderPlugin');
 +  if (
 +    swBuilder &&
-+    ~swBuilder.length &&
++    swBuilder.length > 0 &&
 +    swBuilder[0].plugin &&
 +    swBuilder[0].plugin.brotli_
 +  ) {
