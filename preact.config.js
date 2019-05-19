@@ -1,5 +1,5 @@
 import { resolve } from "path";
-const netlifyPlugin = require("preact-cli-plugin-netlify");
+import netlifyPlugin from "preact-cli-plugin-netlify";
 import Critters from "critters-webpack-plugin";
 import CopyPlugin from "copy-webpack-plugin";
 
