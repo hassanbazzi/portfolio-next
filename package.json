@@ -6,7 +6,8 @@
     "start": "netlify dev -d public",
     "prestart": "yarn setup",
     "setup": "preact build --template template.html --dest public --brotli",
-    "presetup": "rm -rf public/assets && mkdir -p public"
+    "presetup": "rm -rf public/assets && mkdir -p public",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "copy-webpack-plugin": "^5.0.3",
