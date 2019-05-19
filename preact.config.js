@@ -14,6 +14,7 @@ export default function(config, env, helpers) {
   let babelConfig = rule.options;
 
   config.plugins.push(new CopyPlugin([{ from: "./robots.txt", to: "./" }]));
+  config.plugins.push(new CopyPlugin([{ from: "_headers", to: "./" }]));
 
   babelConfig.plugins.push("@babel/plugin-proposal-export-default-from");
   return netlifyPlugin(config);
