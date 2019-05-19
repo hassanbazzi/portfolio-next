@@ -93,10 +93,12 @@ export default class Contact extends Component {
             name="message"
             onKeyUp={this.handleInput}
           />
-          <ReCaptcha
-            sitekey="6LduHaMUAAAAAH52aU2TwF08pjJECO8nR8L0pml-"
-            onChange={this.onChange}
-          />
+          {this.state.message && (
+            <ReCaptcha
+              sitekey="6LduHaMUAAAAAH52aU2TwF08pjJECO8nR8L0pml-"
+              onChange={this.onChange}
+            />
+          )}
           <Button>Send</Button>
         </form>
       </div>
