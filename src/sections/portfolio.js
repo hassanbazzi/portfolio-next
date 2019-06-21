@@ -2,6 +2,26 @@ import Cards from "components/Cards";
 
 const items = [
   {
+    name: "Kitab Sawti",
+    logo: null,
+    position: "CTO",
+    summary:
+      "Responsible for strategy, development, architecture, and organizational needs. Building a kick-ass happy and fullfilled remote team."
+  },
+  {
+    name: "Coaching Without Borders",
+    logo: null,
+    position: "Founder, Fullfillment Coach",
+    summary:
+      "Helping individuals live a fullfilling life centered around passion, happiness, clarity, and gratitude"
+  },
+  {
+    name: "Mobile Bank - Danske Bank",
+    logo: null,
+    position: "Senior Architect",
+    summary: "Helped set and execute on Danske Bank's mobile bank arcitecture."
+  },
+  {
     name: "Baldr App - Danske Bank",
     logo: null,
     position: "Senior Fullstack Developer",

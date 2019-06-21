@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-evenly;
 
-  @media all and (max-width: 740px) {
+  @media all and (max-width: 768px) {
     flex-direction: column;
   }
 }
@@ -25,16 +25,16 @@
 }
 
 .description {
-  @media all and (min-width: 740px) {
+  @media all and (min-width: 769px) {
     max-width: 60%;
   }
 
   h1,
   h3 {
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     color: rgba(27, 90, 143, 0.9);
 
-    @media all and (max-width: 740px) {
+    @media all and (max-width: 768px) {
       text-align: center;
     }
 
@@ -48,7 +48,7 @@
     font-size: 3rem;
     font-weight: 400;
 
-    @media all and (max-width: 740px) {
+    @media all and (max-width: 768px) {
       margin-top: 1rem;
     }
   }
@@ -58,13 +58,13 @@
     font-size: 2rem;
     font-weight: 300;
 
-    @media all and (max-width: 740px) {
+    @media all and (max-width: 768px) {
       font-size: 1rem;
     }
   }
 
   p {
-    @media all and (max-width: 740px) {
+    @media all and (max-width: 768px) {
       text-align: justify;
     }
   }

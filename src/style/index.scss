@@ -64,8 +64,18 @@ a:visited {
   margin: 0 auto;
   padding: 2rem 1rem;
 
+  @media all and (max-width: 1024px) {
+    padding: 0.5rem 2rem 0.5rem 1rem;
+  }
+
   @media all and (max-width: 740px) {
     padding: 0.5rem 1rem;
+  }
+
+  &:last-child {
+    @media all and (max-width: 768px) {
+      padding-bottom: 2rem;
+    }
   }
 
   &.wide {
